@@ -140,6 +140,39 @@
 					  </section>
 				</section>
 				<section>
+				  <h6> Authentication </h6>
+				  
+				</section>
+				<section>
+				  <section>
+				  <h6> CSRF - Cross-site Request Forgery </h6>
+				  <dl>
+				    <dt> CSRF </dt>
+				    <dd> CSRF is a web application attack that leverages the trust between the Authenticated users and web applications to force the users to carry on aribitary actions on behalf of an attacker.</dd>
+				    <dd> Also known as confused Deputy attack </dd>
+				    </dl>
+				  </section>
+				  <section>
+				    <h6> Impact </h6>
+				    <p> Perform actions on the user's account without the user's consent </p>
+				  </section>
+				  <section>
+				    <h6> Root Cause </h6>
+				    <ul>
+				      <li> HTTP is a stateless protocol </li>
+				      <li> Web Browser's inability to properly distinguish between a legitimate and unauthorized request.</li>
+				    </ul>
+				  </section>
+				  <section>
+				    <h6> Countermeasures </h6>
+				    <ul>
+				      <li> Double-posted cookie </li>
+				      <li> Use Anti-CSRF tokens </li>
+				      <li> Re-authentication of the user while carrying out sensitive actions </li>
+				    </ul>
+				 </section>
+				</section>
+				<section>
 					    The End
 			        </section>
 			
