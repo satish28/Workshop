@@ -100,7 +100,9 @@
 				</section>
 
 				<section>
+				        <section>
 					<h3>Cross Site Scripting AKA XSS</h3>
+					</section>
 					<section>
 					<em> Definition: </em>
 						<p>Cross Site Scripting attacks are type of Injection attacks, where an attacker places malicious code usually javasscript in location where user can see. {Ex: Froms}
@@ -140,12 +142,106 @@
 					  </section>
 				</section>
 				<section>
-				  <h6> Authentication </h6>
+				  <h3> Authentication </h3>
 				  
 				</section>
 				<section>
 				  <section>
-				  <h6> CSRF - Cross-site Request Forgery </h6>
+				    <h3> Missing Function Level Access Control </h3>
+				  </section>
+				  <section>
+				    <dl>
+				      <dt> Defnition </dt>
+				      <dd> Related to Session management and authentication. Developers and designers of an application sometimes implement faulty mechanisms to implement access control. This leads an attacker to access functionality which the user is restricted from accessing. </dd>
+				    </dl>
+				  </section>
+				  <section>
+				    <h3> Root Cause </h3> 
+				    <ul>
+				      <li> Access control checks are not made on all user actions post login.</li>
+				      <li> Depending on Client side controls to implement access control mechanisms </li>
+				    </ul>
+				  </section>
+				  <section>
+				    <h3> Countermeasures </h3>
+				    <ul> 
+				      <li> Perform authentication and authorization checks on all user actions. </li>
+				      <li> Enforce Server Side checks and do not depend only on Client Side Validation. </li>
+				    </ul>
+				  </section>
+				</section>
+				<section>
+				  <section>
+				    <h3> Insecure Direct Object Reference </h3>
+				  </section>
+				  <section>
+				    <dl>
+				      <dt> Defnition </dt>
+				      <dd> Related to Session management and authentication. Developers and designers of an application sometimes implement faulty mechanisms to implement access control. Missing Function Level access control and insecure direct object access are very closely related. </dd> </dl>
+				  </section>
+				  <section>
+				    <dl>
+				      <dd> Missing function level access is about accessing functionality the user doesn't have rights to whe
+					reas Insecure Direct Object Access is more related to Sensitive data exposure.</dd>
+      				    </dl>
+				  </section>
+				  </section>
+				</section>
+				<section>
+				  <section>
+				  <h3> Password Cracking Methods </h3>
+				  </section>
+				  <section>
+				    <p> As the name suggests the attacker tries to guess the username and password of a user. </p>
+				    <p> Some of the password cracking methods are </p>
+				    <ul>
+				      <li> Manually guessing username and passwords </li>
+				      <li> Brute force attack of passwords</li>
+				      <li> Dictionary attacks </li>
+				      <li> Rainbow Tables </li>
+				      <li> Phishing </li>
+				      <li> Social Engineering </li>
+				     </ul>
+				    </section>
+				  <section>
+				    <h6> Counter Measures </h6>
+				    <ul>
+				      <li> Enforce a strong Password policy.Use atleast 8 characters with a mix of Upper case,lower cases numbers and special characters. </li>
+				      <li> Use CAPTCHA mechanisms on the login page to prevent automated guessing of usernames and passwords </li>
+				      <li> Implement account lockout policy after 3 or 5 invalid login attempts depending on the application</li>
+				      </section>
+				      
+				</section>
+				<section>
+				  <section>
+				    <h3> Software with known vulnerabilites </h3>
+				  </section>
+				  <section>
+				    <dl>
+				      <dt> Defnition </dt>
+				      <dd> Most applications developed today depend on a lot of other components and most of these components are not developed by the same team as the application. For Ex: An application might use a specific Java version or MySQL. </dd>
+				      <dd> Vulnerabilites in these components weakens the security posture of an application. </dd>
+				    </dl>
+				  </section>
+				  <section>
+				    <h3> Countermeasures </h3>
+				    <ul>
+				      <li> Keep track of all components and versions in use. </li>
+				      <li> Monitor public databases to identify if any components in use are vulnerable and update the packaes as advised. </li>
+				  </section>
+				</section>
+				</section>
+				<section>
+				  <h3> Information Leakage </h3>
+				</section>
+				<section>
+				  <h3> Web Server Hacking </h3>
+				</section>
+				<section>
+				  <section>
+				    <h3> CSRF - Cross-site Request Forgery </h3>
+				  </section>
+				  <section>
 				  <dl>
 				    <dt> CSRF </dt>
 				    <dd> CSRF is a web application attack that leverages the trust between the Authenticated users and web applications to force the users to carry on aribitary actions on behalf of an attacker.</dd>
@@ -171,6 +267,22 @@
 				      <li> Re-authentication of the user while carrying out sensitive actions </li>
 				    </ul>
 				 </section>
+				</section>
+				<section>
+				  <h3> Injection Attacks </h3>
+				  <dl>
+				    <dt> </dt>
+				    <dd> </dd>
+				  </dl>
+				</section>
+				<section>
+				  <h3> Security Misconfiguration </h3>
+				</section>
+				<section>
+				  <h3> Unvalidated redirects and forwards </h3>
+				</section>
+				<section>
+				  <h3> Sensitive Data Exposure </h3>
 				</section>
 				<section>
 					    The End
