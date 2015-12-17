@@ -85,13 +85,14 @@
 						<ul>
 						  <li> Sensitive Information Disclosure {1 Mark}</li>
 						  <li> Reflected XSS {3 Marks} </li>
-						  <li> CSRF {5 Marks} </li>
+						  <li> CSRF {3 Marks} </li>
 						  <li> Version Information Disclosure {1 Mark} </li>
+						  <li> Find out the current version of Web server installed in your system, and check if there are any known vulnerabilites, metasploit modules. </li>
 						</ul>
 						<p> OR </p>
 						<ul>
-						  <li> XSS Using XML Injection {5 Marks} </li>
-						  <li> CSRF {5 Marks} </li>
+						  <li> XSS Using XML Injection {7 Marks} </li>
+						  <li> CSRF {3 Marks} </li>
 						</ul>
 						<br>
 						<a href="#/2">
@@ -128,9 +129,8 @@
 					  </section>
 					  <section> 
 					    <h6> Counter Measures </h6>
-					    <ol>
-					      <li>Never trust user input </li>
 					      <ul>
+						<li> Never trust user input </li>
 						<li>Escape HTML, Javascript data when modifying HTML content of the page</li>
 						<li> Sanitize user input with a standardized library.Do not implement your own library</li>
 						</ul>
@@ -142,8 +142,61 @@
 					  </section>
 				</section>
 				<section>
-				  <h3> Authentication </h3>
-				  
+				  <section>
+				  <h3> Broken Session Management and Authentication </h3>
+				  </section>
+				  <section> 
+				    <h3> Session Management Attacks </h3> 
+				    <ul> 
+				      <li> Session Fixation </li>
+				      <li> Session Hijacking </li> 
+				      <li> User Enumeration </li> 
+				      <li> Eavesdropping and Replay attacks </li>
+				    </ul>
+				  </section>
+				  <section>
+				    <dl>
+				      <dt> Session Fixation </dt>
+				      <dd> Session fixation allows an attacker to hijack a valid user session, by forcing the victim to use a cookie or Session ID which the attacker knows for an application. </dd> 
+				    </dl>
+				  </section>
+				  <section>
+				    <h3> Root Cause </h3> 
+				    <p> Session fixation occurs when the application does not change the SessionID for an user post login.</p>
+				  </section>
+				  <section>
+				    <h3> A few techniques to execute Session Fixation </h3>
+				    <ul> 
+				      <li> Session token in URL </li>
+				      <li> Session token in hidden form field </li>
+				      <li> SessionID in a cookies </li>
+				     </ul>
+				  </section>
+				  <section>
+				    <dl>
+				    <dt> Session Hijacking </dt>
+				    <dd> Session Hijacking attack compromises the session token by stealing or predicting a valid session token to gain unauthorized access to the web application. </dd> 
+				    </dl>
+				   </section>
+				  <section>
+				    <h3> Compromising Session tokens </h3> 
+				    <ul>
+				      <li> Predictable Session token </li>
+				      <li> Session Sniffing </li> 
+				      <li> Client Side attacks </li>
+				      <li> Man in the middle attacks</li> 
+				    </ul>
+				  </section>
+				  <section>
+				    <h3> Countermeasures </h3> 
+				    <ul> 
+				      <li> Use strong session tokens </li>
+				      <li> Change Session token values post login </li> 
+				      <li> Do not send session tokens in URLs </li>
+				      <li> Never transmit User credentials or Session tokens using plain text protocols </li>
+				      <li> If possible use standard authentication mechanisms. donot build your own authentication mechanisms </li>
+				     </ul>
+				   </section>
 				</section>
 				<section>
 				  <section>
@@ -232,10 +285,76 @@
 				</section>
 				</section>
 				<section>
+				  <section>
 				  <h3> Information Leakage </h3>
+				  </section>
+				  <section>
+				  <dl>
+				    <dt> Information Leakage </dt>
+				    <dd> Its caused when Applications reveal information about the backend of the application to a normal user through error messages.  </dd>
+				  </dl>
+				  </section>
+				  <section>
+				    <h3> Information leakage Examples </h3> 
+				    <ul> 
+				      <li> Filenames, File paths </li>
+				      <li> User disclosure </li>
+				      <li> Default error pages </li>
+				      <li> Comments left in HTML Source code </li> 
+				      <li> Common file names </li>
+				    </ul>
+				  </section>
+				  <section>
+				    <h3> Countermeasures </h3>
+				    <ul> 
+				      <li> Deploy web root on a seperate volume </li>
+				      <li> Keep backup and archives in a differnt folder and not on the root </li>
+				      <li> Donot use common filenames </li>
+				      <li> Protect folders with important data with authentication </li>
+				      <li> Set custom error messages instead of default error messages </li>
+				  </section>
 				</section>
 				<section>
-				  <h3> Web Server Hacking </h3>
+				  <section>
+				    <h3> Web Server Hacking </h3>
+				  </section>
+				  <section>
+				    <p> As the name suggests we will be targetting the Web server which is running the application. </p>
+				    <p> Successfully Targetting Web Servers provides more benefits for an attacker. Web applications are different, they run different logic and have different security protection in place.</p>
+				 </section>
+				 <section>
+				    <p> Whereas Web Servers which are mostly developed by 3rd party companies have more or less the same security measures. </p>
+				    <p> For Ex: An attacker finds a Remote Code Execution vulnerability in Apache 2.4.6. An attacker can use this knowledge to target all web applications running Apache 2.4.6 which might be in 1000's. </p>
+				  </section>
+				  <section>
+				    <h3> Methods of Web Server Hacking </h3>
+				    <ul>
+				      <li> Automated Exploitation </li>
+				      <li> Manual Exploitation </li>
+				    </ul>
+				  </section>
+				  <section>
+				    <h3> Automated Exploitation </h3>
+				    <ul> 
+				      <li> Metasploit </li>
+				      <li> Core Impact </li>
+				      <li> Canvas </li>
+				    </ul>
+				  </section>
+				  <section>
+				    <h3> Manual Exploitation </h3>
+				    <p> Manual exploitation is more time consuming where the attacker has to understand how the application handles the requests, reverse engineer them and find a loophole which causes the server to some arbitray damage. </p>
+				  </section>
+				  <section>
+				    <h3> Countermeasures </h3>
+				    <ul>
+				      <li> Strong Network Access Control in both direction. </li>
+				      <li> Update security patches when they are released. </li>
+				      <li> Turn of detailed error messages. </li>
+				      <li> Do not install your Server in the Root Folder or system folder. </li>
+				      <li> Remove unwanted addons or software from the serve.</li>
+				    </ul>
+				  </section>
 				</section>
 				<section>
 				  <section>
